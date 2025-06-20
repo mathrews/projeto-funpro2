@@ -3,14 +3,14 @@ body {
 	background-color: gray;
 }
 
-.wrapper {
+.card-wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 }
 
-.container {
+.card-container {
 	display: grid;
 	grid-template-columns: repeat(4, 10rem);
 	justify-content: center;
@@ -18,7 +18,7 @@ body {
 	margin: 0 auto;
 }
 
-.container > div {
+.card-container > div {
 	border-radius: 5px;
 	padding: 10px;
 	margin: 5px;
@@ -28,4 +28,21 @@ body {
 
 .card > img {
 	max-width: 100%;
+}
+
+/* MELHORAR ESTILIZAÇÃO */
+
+.counter-container {
+	display: flex;
+	justify-content: right;
+	padding: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.counter-label {
+	padding-right: 5px;
+}
+
+.counter-out {
+	margin-right: 1rem;
 }
