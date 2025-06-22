@@ -1,0 +1,67 @@
+<!--
+	Fonte da imagem: commons.wikimedia.org/wiki/File:The_Jolly_Nero.jpg.
+	Domínio público.
+-->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="styles/grid.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+
+	<body>
+		<section class="counter-container">
+			<label class="counter-label" for="attempts">TENTATIVAS:</label>
+			<output class="counter-out" id="attempts" name="attempts">0</output>
+			<label class="counter-label" for="found">ENCONTRADOS:</label>
+			<output class="counter-out" id="found" name="found">0</output>
+		</section>
+
+		<div class="card-wrapper">
+			<div class="card-container">
+				<div class="card">
+					<img src="assets/coringa.jpg"/>
+				</div>
+				<div class="card">
+					<img src="assets/coringa.jpg"/>
+				</div>
+				<div class="card">
+					<img src="assets/coringa.jpg"/>
+				</div>
+				<div class="card">
+					<img src="assets/coringa.jpg"/>
+				</div>
+				<div class="card">
+					<img src="assets/coringa.jpg"/>
+				</div>
+				<div class="card">
+					<img src="assets/coringa.jpg"/>
+				</div>
+				<div class="card">
+					<img src="assets/coringa.jpg"/>
+				</div>
+				<div class="card">
+					<img src="assets/coringa.jpg"/>
+				</div>
+			</div>
+
+			<button id="button-win" onClick="toggleWin()">
+				Vencer o jogo.
+			</button>
+		</div>
+
+		<div class="popup-win-hidden" id="popup-win">
+			<button id="popup-exit" onClick="toggleWin()">
+				X
+			</button>
+
+			<p>Oi. Eu sou um pop-up.</p>
+			<p>Você ganhou este jogo. Fique feliz. Agora.</p>
+		</div>
+
+		<script src="scripts/grid.js"></script>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+	margin: 0px;
+	background-color: gray;
+}
+
+.card-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(4, 10rem);
+	justify-content: center;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.card-container > div {
+	border-radius: 5px;
+	padding: 10px;
+	margin: 5px;
+	background-color: aliceblue;
+	border: 2px solid greenyellow;
+}
+
+.card > img {
+	max-width: 100%;
+}
+
+/* MELHORAR ESTILIZAÇÃO */
+
+.counter-container {
+	display: flex;
+	justify-content: right;
+	padding: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.counter-label {
+	padding-right: 5px;
+}
+
+.counter-out {
+	margin-right: 1rem;
+}
+
+#button-win {
+	background-color: black;
+	color: white;
+	border: 0.1rem solid white;
+	width: 10rem;
+	height: 5rem;
+}
+
+.popup-win-hidden {
+	display: none;
+}
+
+#popup-win {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 0.5rem solid olive;
+	padding: 2rem;
+	background-color: beige;
+}
+
+/* Não consigo centralizar esse "X" */
+#popup-exit {
+	position: absolute;
+	font-family: monospace;
+	top: 0;
+	right: 0;
+	text-align: center;
+	color: white;
+	background-color: red;
+	margin: 0.2rem;
+	padding: 0.3rem;
+}
