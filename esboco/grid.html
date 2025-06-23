@@ -8,8 +8,8 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="styles/grid.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="styles/grid.css"/>
 	</head>
 
 	<body>
@@ -53,14 +53,13 @@
 			</button>
 		</section>
 
-		<div class="popup-win-hidden" id="popup-win">
-			<button id="popup-exit" onClick="toggleWin()">
-				X
-			</button>
-
-			<p>Oi. Eu sou um pop-up.</p>
-			<p>Você ganhou este jogo. Fique feliz. Agora.</p>
-		</div>
+		<div class="victory-modal-hidden">
+            <div id="victory-content">
+                <h2>Você venceu!</h2>
+                <p>Parabéns por encontrar todos os pares!</p>
+                <button id="restart-button" onClick="restart()">Jogar Novamente</button>
+            </div>
+        </div>
 
 		<script src="scripts/grid.js"></script>
 	</body>

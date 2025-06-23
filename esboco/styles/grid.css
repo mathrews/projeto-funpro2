@@ -65,29 +65,24 @@ body {
 	margin: 1rem 0rem 0rem 0rem;
 }
 
-.popup-win-hidden {
-	display: none;
+.victory-modal-hidden {
+  display: none;
+}
+#victory-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#popup-win {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border: 0.5rem solid olive;
-	padding: 2rem;
-	background-color: beige;
-}
-
-/* Não consigo centralizar esse "X" */
-#popup-exit {
-	position: absolute;
-	font-family: monospace;
-	top: 0;
-	right: 0;
-	text-align: center;
-	color: white;
-	background-color: red;
-	margin: 0.2rem;
-	padding: 0.3rem;
+#victory-content {
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: aliceblue;
+    box-shadow: 0 0 20px gray;
 }
