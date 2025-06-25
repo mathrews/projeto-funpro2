@@ -3,6 +3,15 @@ const cardContainer = document.querySelector(".card-container");
 const attempts = document.querySelector("#attempts[name='attempts']");
 const found = document.querySelector("#found[name='found']");
 
+
+let flippedCards = 0;
+
+let targets = [];
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 let cards = [
   { id: 0, img: "assets/socrates.jpg", idEqual: 7 },
   { id: 1, img: "assets/platao.jpg", idEqual: 4 },
@@ -14,19 +23,12 @@ let cards = [
   { id: 7, img: "assets/socrates.jpg", idEqual: 0 },
 ];
 
-let flippedCards = 0;
-
-let targets = [];
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-window.onload = function () {
-  for (let i = 0; i < 10; i++) {
-    cardId = getRandomInt(cards.length);
-    let e = cards[cardId];
-    cards.splice(cardId, 1);
+function setupCards() {
+  let cards_copy = cards.slice();
+  for (let i = 0; i < cards.length; i++) {
+    cardId = getRandomInt(cards_copy.length);
+    let e = cards_copy[cardId];
+    cards_copy.splice(cardId, 1);
 
     cardContainer.innerHTML += `
 			<div class="flip-card" onClick="flipCard(${e.id})">
@@ -44,13 +46,20 @@ window.onload = function () {
     attempts.value = 0;
     found.value = 0;
   }
+}
+
+window.onload = function () {
+  setupCards();
 };
 
-function toggleWin() {
+function winGame() {
   if (popups.length > 0) {
     popups[0].id = "victory-modal";
     popups[0].className = "";
   }
+  
+  cardContainer.innerHTML = '';
+  setupCards();
 }
 
 function restartGame() {
@@ -85,6 +94,10 @@ function flipCard(num) {
         if (targets[0].dataset.idequal == targets[1].dataset.id) {
           console.log("Par correto!");
           found.value++
+          
+          if (found.value == cards.length / 2) {
+            winGame();
+          }
         } else {
           turnDownWrongCards(targets);
           console.log("Par errado!");
