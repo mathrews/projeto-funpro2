@@ -30,7 +30,7 @@ window.onload = function () {
 
     cardContainer.innerHTML += `
 			<div class="flip-card" onClick="trigger(${e.id})">
-						<div class="flip-card-inner" data-id="${e.id}" data-idEqual="${e.idEqual}">
+						<div class="flip-card-inner" data-id="${e.id}" data-idequal="${e.idEqual}">
 							<div class="flip-card-front">
 								<h1>?</h1>
 							</div>
@@ -79,7 +79,7 @@ function trigger(num) {
 
     if (flippedCards === 2) {
       setTimeout(() => {
-        if (targets[0].dataset.idEqual === targets[1].dataset.id) {
+        if (targets[0].dataset.idequal == targets[1].dataset.id) {
           console.log("Par correto!");
         } else {
           turnDownWrongCards(targets);
