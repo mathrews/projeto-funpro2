@@ -4,16 +4,14 @@ const attempts = document.querySelector("#attempts[name='attempts']");
 const found = document.querySelector("#found[name='found']");
 
 let cards = [
-  { id: 0, img: "assets/coringa.jpg", idEqual: 7 },
-  { id: 1, img: "assets/coringa.jpg", idEqual: 4 },
-  { id: 2, img: "assets/coringa.jpg", idEqual: 9 },
-  { id: 3, img: "assets/coringa.jpg", idEqual: 5 },
-  { id: 4, img: "assets/coringa.jpg", idEqual: 1 },
-  { id: 5, img: "assets/coringa.jpg", idEqual: 3 },
-  { id: 6, img: "assets/coringa.jpg", idEqual: 8 },
-  { id: 7, img: "assets/coringa.jpg", idEqual: 0 },
-  { id: 8, img: "assets/coringa.jpg", idEqual: 6 },
-  { id: 9, img: "assets/coringa.jpg", idEqual: 2 },
+  { id: 0, img: "assets/socrates.jpg", idEqual: 7 },
+  { id: 1, img: "assets/platao.jpg", idEqual: 4 },
+  { id: 2, img: "assets/aristoteles.jpg", idEqual: 5 },
+  { id: 3, img: "assets/zenao.jpg", idEqual: 6 },
+  { id: 4, img: "assets/platao.jpg", idEqual: 1 },
+  { id: 5, img: "assets/aristoteles.jpg", idEqual: 2 },
+  { id: 6, img: "assets/zenao.jpg", idEqual: 3 },
+  { id: 7, img: "assets/socrates.jpg", idEqual: 0 },
 ];
 
 let flippedCards = 0;
@@ -31,7 +29,7 @@ window.onload = function () {
     cards.splice(cardId, 1);
 
     cardContainer.innerHTML += `
-			<div class="flip-card" onClick="trigger(${e.id})">
+			<div class="flip-card" onClick="flipCard(${e.id})">
 						<div class="flip-card-inner" data-id="${e.id}" data-idequal="${e.idEqual}">
 							<div class="flip-card-front">
 								<h1>?</h1>
@@ -74,7 +72,7 @@ function turnDownWrongCards(targets) {
   card2.classList.remove("flip-card-inner-animation");
 }
 
-function trigger(num) {
+function flipCard(num) {
   const target = document.querySelector(`.flip-card-inner[data-id="${num}"]`);
 
   if (target && !target.classList.contains("flip-card-inner-animation") && flippedCards < 2) {
