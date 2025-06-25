@@ -1,5 +1,7 @@
 const popups = document.querySelectorAll(".victory-modal-hidden");
 const cardContainer = document.querySelector(".card-container");
+const attempts = document.querySelector("#attempts[name='attempts']");
+const found = document.querySelector("#found[name='found']");
 
 let cards = [
   { id: 0, img: "assets/coringa.jpg", idEqual: 7 },
@@ -40,6 +42,9 @@ window.onload = function () {
 						</div>
 			</div>
 			`;
+
+    attempts.value = 0;
+    found.value = 0;
   }
 };
 
@@ -81,8 +86,11 @@ function trigger(num) {
       setTimeout(() => {
         if (targets[0].dataset.idequal == targets[1].dataset.id) {
           console.log("Par correto!");
+          found.value++
         } else {
           turnDownWrongCards(targets);
+          console.log("Par errado!");
+          attempts.value++
         }
 
         // Reset
