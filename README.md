@@ -3,7 +3,7 @@
 Este repositório armazena nosso trabalho avaliativo para a disciplina de
 Fundamentos de Programação II no curso técnico integrado em Informática no
 IFCE, campus Fortaleza. O projeto consiste em construir um jogo escolhido pela
-equipe usando a trindade da web: HTML, CSS e Javascript.
+equipe usando a trindade da web: HTML, CSS e Javascript. Escolhemos programar o Jogo da Memória.
 
 ## A Equipe
 
