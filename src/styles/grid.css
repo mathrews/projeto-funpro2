@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
 html,
 body {
   margin: 0;
@@ -7,29 +9,43 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  background-image: url('../assets/background.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
 /* Head */
-
-.info-container h1 {
-  display: flex;
-  justify-content: center;
-}
 
 .counter-container {
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.counter-label {
-  padding-right: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Play', sans-serif;
+  color: white;
 }
 
 .counter-out {
-  margin-right: 1rem;
+  margin-left: 5px;
+}
+
+.counter-box {
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #D4AF37;
+  border-radius: 20px;
+  background-color: #281400;
+  padding: 0.625rem;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
 /* Card Wrapper */

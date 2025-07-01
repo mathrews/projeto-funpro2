@@ -13,18 +13,20 @@ function getRandomInt(max) {
 }
 
 let cards = [
-  { id: 0, img: "assets/socrates.svg", idEqual: 11 },
-  { id: 1, img: "assets/platao.svg", idEqual: 6 },
-  { id: 2, img: "assets/aristoteles.svg", idEqual: 7 },
-  { id: 3, img: "assets/zenao.svg", idEqual: 8 },
-  { id: 4, img: "assets/epicuro.svg", idEqual: 9 },
-  { id: 5, img: "assets/talesMileto.svg", idEqual: 10 },
-  { id: 6, img: "assets/platao.svg", idEqual: 1 },
-  { id: 7, img: "assets/aristoteles.svg", idEqual: 2 },
-  { id: 8, img: "assets/zenao.svg", idEqual: 3 },
-  { id: 9, img: "assets/epicuro.svg", idEqual: 4 },
-  { id: 10, img: "assets/talesMileto.svg", idEqual: 5 },
-  { id: 11, img: "assets/socrates.svg", idEqual: 0 },
+  { id: 0, img: "assets/socrates.svg", idEqual: 12 },
+  { id: 1, img: "assets/platao.svg", idEqual: 7 },
+  { id: 2, img: "assets/aristoteles.svg", idEqual: 8 },
+  { id: 3, img: "assets/zenao.svg", idEqual: 9 },
+  { id: 4, img: "assets/epicuro.svg", idEqual: 10 },
+  { id: 5, img: "assets/talesMileto.svg", idEqual: 11 },
+  { id: 6, img: "assets/locke.svg", idEqual: 13 },
+  { id: 7, img: "assets/platao.svg", idEqual: 1 },
+  { id: 8, img: "assets/aristoteles.svg", idEqual: 2 },
+  { id: 9, img: "assets/zenao.svg", idEqual: 3 },
+  { id: 10, img: "assets/epicuro.svg", idEqual: 4 },
+  { id: 11, img: "assets/talesMileto.svg", idEqual: 5 },
+  { id: 12, img: "assets/socrates.svg", idEqual: 0 },
+  { id: 13, img: "assets/locke.svg", idEqual: 6 }
 ];
 
 function setupCards() {
