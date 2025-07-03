@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;    /* Ocupa 100% da largura da tela */
   background-image: url('../assets/background.svg');
-  background-color: black;
+  background-color: black; /*para tirar a barra branca da imagem*/
   background-position: center;
   background-size: cover; /* Preenche todo o corpo, mesmo que distorça */
   background-repeat: no-repeat;

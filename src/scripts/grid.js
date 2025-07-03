@@ -63,9 +63,6 @@ function winGame() {
     popups[0].id = "victory-modal";
     popups[0].className = "";
   }
-
-  cardContainer.innerHTML = '';
-  setupCards();
 }
 
 function restartGame() {
