@@ -63,7 +63,7 @@ function winGame() {
     popups[0].id = "victory-modal";
     popups[0].className = "";
   }
-  
+
   cardContainer.innerHTML = '';
   setupCards();
 }
@@ -100,7 +100,8 @@ function flipCard(num) {
         if (targets[0].dataset.idequal == targets[1].dataset.id) {
           console.log("Par correto!");
           found.value++
-          
+          attempts.value++
+
           if (found.value == cards.length / 2) {
             winGame();
           }
