@@ -5,12 +5,18 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  border: none;
+  list-style: none;
+  outline: none;
+  scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   flex-direction: column;    /* Ocupa 100% da largura da tela */
   background-image: url('../assets/background.svg');
+  background-color: black;
   background-position: center;
   background-size: cover; /* Preenche todo o corpo, mesmo que distorça */
   background-repeat: no-repeat;
@@ -67,7 +73,7 @@ body::before {
   justify-content: center;
   justify-items: center;
   width: 100%;
-  max-width: 1000px; /* Ajuste conforme o tamanho total que desejar */
+  max-width: 50%;
   margin: 0 auto;
 }
 
@@ -78,6 +84,7 @@ body::before {
   max-width: 10rem;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .flip-card-inner {
@@ -117,6 +124,32 @@ body::before {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+}
+
+/* Restart Button */
+
+.restart-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10rem;
+}
+
+.restart-button {
+  cursor: pointer;
+  max-height: 3rem;
+  display: flex;
+  align-items: center;
+  border: 2px solid #D4AF37;
+  border-radius: 1.25rem;
+  background-color: #281400;
+  padding: 0.625rem;
+  margin: 0.625rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 /* Button-Win e Modal */

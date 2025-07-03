@@ -73,6 +73,8 @@ function restartGame() {
     popups[0].id = "";
     popups[0].className = "victory-modal-hidden";
   }
+
+  window.location.reload();
 }
 
 function turnDownWrongCards(targets) {

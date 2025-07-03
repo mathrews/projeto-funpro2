@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/grid.css" />
   </head>
 
- <body>
+  <body>
     <section class="counter-container">
       <div class="counter-box">
         <label class="counter-label" for="attempts">TENTATIVAS:</label>
@@ -28,11 +28,21 @@
       <div class="card-container"></div>
     </section>
 
+    <section class="restart-container">
+      <div class="restart">
+        <button class="restart-button" onClick="restartGame()">
+          Reiniciar
+        </button>
+      </div>
+    </section>
+
     <div class="victory-modal-hidden">
       <div id="victory-content">
         <h2>Você venceu!</h2>
         <p>Parabéns por encontrar todos os pares!</p>
-        <button id="restart-button" onClick="restartGame()">Jogar Novamente</button>
+        <button id="restart-button" onClick="restartGame()">
+          Jogar Novamente
+        </button>
       </div>
     </div>
 
