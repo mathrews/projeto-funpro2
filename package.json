@@ -1,0 +1,24 @@
+{
+  "name": "projeto-funpro2",
+  "version": "1.0.0",
+  "description": "Este repositório armazena nosso trabalho avaliativo para a disciplina de Fundamentos de Programação II no curso técnico integrado em Informática no IFCE, campus Fortaleza. O projeto consiste em construir um jogo escolhido pela equipe usando a trindade da web: HTML, CSS e Javascript. Escolhemos programar o Jogo da Memória.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/distobs/projeto-funpro2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/distobs/projeto-funpro2/issues"
+  },
+  "homepage": "https://github.com/distobs/projeto-funpro2#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

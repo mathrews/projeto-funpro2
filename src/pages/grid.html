@@ -9,19 +9,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/grid.css" />
+    <link rel="stylesheet" href="../styles/grid.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   </head>
 
   <body>
     <section class="counter-container">
-      <div class="counter-box">
-        <label class="counter-label" for="attempts">TENTATIVAS:</label>
-        <output class="counter-out" id="attempts" name="attempts"></output>
-      </div>
-      <div class="counter-box">
-        <label class="counter-label" for="found">ENCONTRADOS:</label>
-        <output class="counter-out" id="found" name="found"></output>
-      </div>
+      <section class="back-button-section">
+        <a href="/" class="back-button"><i class="fa-solid fa-arrow-left"></i></a>
+      </section>
+      <section class="counterboxes-section" style="display: flex;">
+        <div class="counter-box">
+          <label class="counter-label" for="attempts">TENTATIVAS:</label>
+          <output class="counter-out" id="attempts" name="attempts"></output>
+        </div>
+        <div class="counter-box">
+          <label class="counter-label" for="found">ENCONTRADOS:</label>
+          <output class="counter-out" id="found" name="found"></output>
+        </div>
+      </section>
     </section>
 
     <section class="card-wrapper">
@@ -46,6 +52,6 @@
       </div>
     </div>
 
-    <script src="scripts/grid.js"></script>
+    <script src="../scripts/grid.js"></script>
   </body>
 </html>

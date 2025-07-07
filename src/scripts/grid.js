@@ -3,6 +3,22 @@ const cardContainer = document.querySelector(".card-container");
 const attempts = document.querySelector("#attempts[name='attempts']");
 const found = document.querySelector("#found[name='found']");
 
+const imageCards = [
+  "../assets/socrates.svg",
+  "../assets/platao.svg",
+  "../assets/aristoteles.svg",
+  "../assets/zenao.svg",
+  "../assets/epicuro.svg",
+  "../assets/talesMileto.svg",
+  "../assets/locke.svg",
+  "../assets/platao.svg",
+  "../assets/aristoteles.svg",
+  "../assets/zenao.svg",
+  "../assets/epicuro.svg",
+  "../assets/talesMileto.svg",
+  "../assets/socrates.svg",
+  "../assets/locke.svg",
+];
 
 let flippedCards = 0;
 
@@ -13,20 +29,20 @@ function getRandomInt(max) {
 }
 
 let cards = [
-  { id: 0, img: "assets/socrates.svg", idEqual: 12 },
-  { id: 1, img: "assets/platao.svg", idEqual: 7 },
-  { id: 2, img: "assets/aristoteles.svg", idEqual: 8 },
-  { id: 3, img: "assets/zenao.svg", idEqual: 9 },
-  { id: 4, img: "assets/epicuro.svg", idEqual: 10 },
-  { id: 5, img: "assets/talesMileto.svg", idEqual: 11 },
-  { id: 6, img: "assets/locke.svg", idEqual: 13 },
-  { id: 7, img: "assets/platao.svg", idEqual: 1 },
-  { id: 8, img: "assets/aristoteles.svg", idEqual: 2 },
-  { id: 9, img: "assets/zenao.svg", idEqual: 3 },
-  { id: 10, img: "assets/epicuro.svg", idEqual: 4 },
-  { id: 11, img: "assets/talesMileto.svg", idEqual: 5 },
-  { id: 12, img: "assets/socrates.svg", idEqual: 0 },
-  { id: 13, img: "assets/locke.svg", idEqual: 6 }
+  { id: 0, img: imageCards[0], idEqual: 12 },
+  { id: 1, img: imageCards[1], idEqual: 7 },
+  { id: 2, img: imageCards[2], idEqual: 8 },
+  { id: 3, img: imageCards[3], idEqual: 9 },
+  { id: 4, img: imageCards[4], idEqual: 10 },
+  { id: 5, img: imageCards[5], idEqual: 11 },
+  { id: 6, img: imageCards[6], idEqual: 13 },
+  { id: 7, img: imageCards[7], idEqual: 1 },
+  { id: 8, img: imageCards[8], idEqual: 2 },
+  { id: 9, img: imageCards[9], idEqual: 3 },
+  { id: 10, img: imageCards[10], idEqual: 4 },
+  { id: 11, img: imageCards[11], idEqual: 5 },
+  { id: 12, img: imageCards[12], idEqual: 0 },
+  { id: 13, img: imageCards[13], idEqual: 6 },
 ];
 
 function setupCards() {
@@ -89,7 +105,11 @@ function turnDownWrongCards(targets) {
 function flipCard(num) {
   const target = document.querySelector(`.flip-card-inner[data-id="${num}"]`);
 
-  if (target && !target.classList.contains("flip-card-inner-animation") && flippedCards < 2) {
+  if (
+    target &&
+    !target.classList.contains("flip-card-inner-animation") &&
+    flippedCards < 2
+  ) {
     targets.push(target);
     target.classList.add("flip-card-inner-animation");
     flippedCards += 1;
@@ -98,8 +118,8 @@ function flipCard(num) {
       setTimeout(() => {
         if (targets[0].dataset.idequal == targets[1].dataset.id) {
           console.log("Par correto!");
-          found.value++
-          attempts.value++
+          found.value++;
+          attempts.value++;
 
           if (found.value == cards.length / 2) {
             winGame();
@@ -107,7 +127,7 @@ function flipCard(num) {
         } else {
           turnDownWrongCards(targets);
           console.log("Par errado!");
-          attempts.value++
+          attempts.value++;
         }
 
         // Reset
