@@ -17,6 +17,12 @@ equipe usando a trindade da web: HTML, CSS e Javascript. Escolhemos programar o 
 
 - Nicolly Bonifácio (@0Nicolly);
 
+## Para Executar:
+
+```bash
+npm i && nodemon ./src/server.js
+```
+
 ## Licença
 
 A licença para o código está no arquivo correspondente, LICENSE. Seguem os
