@@ -11,13 +11,6 @@ const imageCards = [
   "epicuro.svg",
   "talesMileto.svg",
   "locke.svg",
-  "platao.svg",
-  "aristoteles.svg",
-  "zenao.svg",
-  "epicuro.svg",
-  "talesMileto.svg",
-  "socrates.svg",
-  "locke.svg",
 ];
 
 let flippedCards = 0;
@@ -29,7 +22,7 @@ function getRandomInt(max) {
 }
 
 let cards = [];
-const maxPairs = 7;
+const maxPairs = 6;
 
 function createCardPairs() {
   let cards = [];

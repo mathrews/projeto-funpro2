@@ -89,7 +89,7 @@ body::before {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 colunas fixas */
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
   gap: 1.5rem;
   justify-content: center;
   justify-items: center;
@@ -101,11 +101,15 @@ body::before {
 .flip-card {
   background-color: transparent;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  max-width: 10rem;
-  border: 1px solid #f1f1f1;
+  max-width: 9rem;
+  max-height: 11rem;
+  aspect-ratio: 3 / 4;
+  border-radius: 0.9rem;
   perspective: 1000px;
   cursor: pointer;
+  box-shadow: 0 0px 8px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 .flip-card-inner {
