@@ -46,12 +46,12 @@ function createCardPairs() {
 
     const card1 = {
       id: idCounter,
-      img: `assets/${imageName}`,
+      img: `../assets/${imageName}`,
       idEqual: idCounter + 1
     };
     const card2 = {
       id: idCounter + 1,
-      img: `assets/${imageName}`,
+      img: `../assets/${imageName}`,
       idEqual: idCounter
     };
     cards.push(card1, card2);
