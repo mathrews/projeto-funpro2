@@ -21,7 +21,6 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-let cards = [];
 const maxPairs = 6;
 
 function createCardPairs() {
