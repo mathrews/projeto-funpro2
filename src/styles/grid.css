@@ -1,3 +1,5 @@
+/* Estilo padrão da tela do jogo. */
+
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
 html, body {
@@ -27,7 +29,7 @@ body::before {
   background-color: rgba(0, 0, 0, 0.65);
 }
 
-/* Head */
+/* Estilos dos elementos da seção de contagens na tela do jogo. */
 
 .counter-container {
   display: flex;
@@ -77,7 +79,7 @@ body::before {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
-/* Card Wrapper */
+/* Estilos dos elementos da seção de disposição das cartas na tela do jogo. */
 
 .card-wrapper {
   flex: 1 1 auto;
@@ -151,7 +153,7 @@ body::before {
   transform: rotateY(180deg);
 }
 
-/* Restart Button */
+/* Estilos dos elementos da seção do botão de restart na tela do jogo. */
 
 .restart-container {
   width: 100%;
@@ -177,7 +179,7 @@ body::before {
   font-size: 24px;
 }
 
-/* Button-Win e Modal */
+/* Estilos dos elementos da seção do modal de vitória na tela do jogo. */
 
 #button-win {
   background-color: black;

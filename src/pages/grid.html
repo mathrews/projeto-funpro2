@@ -3,22 +3,31 @@
 	Domínio público.
 -->
 
+<!--Elemento principal do HTML-->
 <!DOCTYPE html>
 
 <html>
+  <!--Configurações padrão da página e importação de arquivos CSS-->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/grid.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
   </head>
 
+  <!--Corpo do HTML (Principal representação dos elementos que compõem a UI da página)-->
   <body>
+    <!--Seção da tela que há o botão de voltar para a main-page e as contagens de tentativa e acerto.-->
     <section class="counter-container">
       <section class="back-button-section">
-        <a href="/" class="back-button"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="/" class="back-button"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
       </section>
-      <section class="counterboxes-section" style="display: flex;">
+      <section class="counterboxes-section" style="display: flex">
         <div class="counter-box">
           <label class="counter-label" for="attempts">TENTATIVAS:</label>
           <output class="counter-out" id="attempts" name="attempts"></output>
@@ -30,10 +39,12 @@
       </section>
     </section>
 
+    <!--Seção em que há a disposição das cartas aleatoriamente-->
     <section class="card-wrapper">
       <div class="card-container"></div>
     </section>
 
+    <!--Seção da tela que contem o botão de reiniciar do jogo-->
     <section class="restart-container">
       <div class="restart">
         <button class="restart-button" onClick="restartGame()">
@@ -42,6 +53,7 @@
       </div>
     </section>
 
+    <!--Modal De vitória. Aparece quando as combinações são achadas-->
     <div class="victory-modal-hidden">
       <div id="victory-content">
         <h2>Você venceu!</h2>
@@ -52,6 +64,7 @@
       </div>
     </div>
 
+    <!--Tag que importa o arquivo JS responsável por dar comportamento à tela.-->
     <script src="../scripts/grid.js"></script>
   </body>
 </html>

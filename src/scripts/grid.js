@@ -1,7 +1,14 @@
+// Constantes dos elementos da tela que são manipulados
 const popups = document.querySelectorAll(".victory-modal-hidden");
 const cardContainer = document.querySelector(".card-container");
 const attempts = document.querySelector("#attempts[name='attempts']");
 const found = document.querySelector("#found[name='found']");
+
+// Constante dos pares máximos usados na função de criação de pares de cartas.
+const maxPairs = 6;
+
+// Constante da classe que ativa a animação de virar a carta
+const flipCardInnerAnimation = "flip-card-inner-animation";
 
 const imageCards = [
   "socrates.svg",
@@ -13,16 +20,16 @@ const imageCards = [
   "locke.svg",
 ];
 
+// Variáveis auxiliar da função de revelação das cartas e combinação das mesmas.
 let flippedCards = 0;
-
 let targets = [];
 
+// Função que gera um numero randomico basiado num máximo.
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-const maxPairs = 6;
-
+// Função de criação de pares.
 function createCardPairs() {
   let cards = [];
   let idCounter = 0;
@@ -30,9 +37,11 @@ function createCardPairs() {
 
   for (let i = 0; i < maxPairs; i++) {
     let index;
+
     do {
       index = getRandomInt(imageCards.length);
     } while (usedAssetIndice.includes(index));
+
     usedAssetIndice.push(index);
     let imageName = imageCards[index];
 
@@ -41,17 +50,20 @@ function createCardPairs() {
       img: `../assets/${imageName}`,
       idEqual: idCounter + 1
     };
+
     const card2 = {
       id: idCounter + 1,
       img: `../assets/${imageName}`,
       idEqual: idCounter
     };
+
     cards.push(card1, card2);
     idCounter += 2;
   }
   return cards;
 }
 
+// Função que dispõe as cartas e as contagens na tela.
 function setupCards() {
   cards = createCardPairs();
   let cards_copy = cards.slice();
@@ -78,48 +90,65 @@ function setupCards() {
   }
 }
 
+// Função que dispara a disposição de cartas ao haver o reload da tela.
 window.onload = function () {
   setupCards();
 };
 
+// Função que dispara o modal ao ganhar o jogo;
 function winGame() {
+  const victoryModal = "victory-modal";
+
   if (popups.length > 0) {
-    popups[0].id = "victory-modal";
+    popups[0].id = victoryModal;
     popups[0].className = "";
   }
 }
 
+// Função do botão de reiniciar o jogo
 function restartGame() {
+  const victoryModalHidden = "victory-modal-hidden";
+
   if (popups.length > 0) {
     popups[0].id = "";
-    popups[0].className = "victory-modal-hidden";
+    popups[0].className = victoryModalHidden;
   }
 
   window.location.reload();
 }
 
+// Função que vira as cartas para baixo caso a combinação esteja errada.
 function turnDownWrongCards(targets) {
+
+  const targetDatasetId1 = `.flip-card-inner[data-id="${targets[0].dataset.id}"]`;
+  const targetDatasetId2 = `.flip-card-inner[data-id="${targets[1].dataset.id}"]`;
+
   const card1 = document.querySelector(
-    `.flip-card-inner[data-id="${targets[0].dataset.id}"]`
+    targetDatasetId1
   );
   const card2 = document.querySelector(
-    `.flip-card-inner[data-id="${targets[1].dataset.id}"]`
+    targetDatasetId2
   );
 
-  card1.classList.remove("flip-card-inner-animation");
-  card2.classList.remove("flip-card-inner-animation");
+  card1.classList.remove(flipCardInnerAnimation);
+  card2.classList.remove(flipCardInnerAnimation);
 }
 
+// Função responsável por virar as cartas e definir se são iguais, ou se a combinação está errada.
 function flipCard(num) {
-  const target = document.querySelector(`.flip-card-inner[data-id="${num}"]`);
+  const targetClass = `.flip-card-inner[data-id="${num}"]`;
+
+  const target = document.querySelector(targetClass);
+
+  const oneSecInMls = 1000;
 
   if (
     target &&
-    !target.classList.contains("flip-card-inner-animation") &&
+    !target.classList.contains(flipCardInnerAnimation) &&
     flippedCards < 2
   ) {
     targets.push(target);
-    target.classList.add("flip-card-inner-animation");
+    target.classList.add(flipCardInnerAnimation);
     flippedCards += 1;
 
     if (flippedCards === 2) {
@@ -141,7 +170,7 @@ function flipCard(num) {
         // Reset
         flippedCards = 0;
         targets = [];
-      }, 1000);
+      }, oneSecInMls);
     }
   }
 }
