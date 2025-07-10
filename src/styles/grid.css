@@ -35,7 +35,6 @@ body::before {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 20px;
   font-family: 'Play', sans-serif;
@@ -181,13 +180,9 @@ body::before {
 
 /* Estilos dos elementos da seção do modal de vitória na tela do jogo. */
 
-#button-win {
-  background-color: black;
-  color: white;
-  border: 0.1rem solid white;
-  width: 10rem;
-  height: 5rem;
-  margin: 1rem 0rem 0rem 0rem;
+#victory-content #button-win {
+  margin: 1rem auto;
+  display: block; 
 }
 
 .victory-modal-hidden {
@@ -203,11 +198,35 @@ body::before {
 }
 
 #victory-content {
+  max-width: 30rem;
+  min-height: 15rem;
+  height: auto;
   width: 90%;
-  max-width: 400px;
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 5rem;
   text-align: center;
-  background-color: aliceblue;
-  box-shadow: 0 0 20px gray;
+  background-color: #704113;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Play', sans-serif;
+  margin: 1rem; 
+}
+
+#victory-content h2 {
+  color: #FFB01C;
+  font-size: 30px;
+}
+
+#victory-content p {
+  color: white;
+  font-size: 24px;
+}
+
+.victory-star { 
+  width: 50px; 
+  height: 50px;
+  margin: 0 auto 1.5rem auto;
+  background-image: url('../assets/2451996.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
