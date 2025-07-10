@@ -10,6 +10,7 @@ const maxPairs = 6;
 // Constante da classe que ativa a animação de virar a carta
 const flipCardInnerAnimation = "flip-card-inner-animation";
 
+// array com as imagens dos assets
 const imageCards = [
   "socrates.svg",
   "platao.svg",
