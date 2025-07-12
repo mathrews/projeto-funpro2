@@ -3,6 +3,8 @@ const popups = document.querySelectorAll(".victory-modal-hidden");
 const cardContainer = document.querySelector(".card-container");
 const attempts = document.querySelector("#attempts[name='attempts']");
 const found = document.querySelector("#found[name='found']");
+const minutesEl = document.querySelector("#minutes");
+const secondsEl = document.querySelector("#seconds");
 
 // Constante dos pares máximos usados na função de criação de pares de cartas.
 const maxPairs = 6;
@@ -115,6 +117,7 @@ function restartGame() {
     popups[0].className = victoryModalHidden;
   }
 
+  resetTimer();
   window.location.reload();
 }
 
@@ -135,8 +138,14 @@ function turnDownWrongCards(targets) {
   card2.classList.remove(flipCardInnerAnimation);
 }
 
+let hasStarted = false;
 // Função responsável por virar as cartas e definir se são iguais, ou se a combinação está errada.
 function flipCard(num) {
+  if (!hasStarted) {
+      startTimer();
+      hasStarted = true;
+  }
+
   const targetClass = `.flip-card-inner[data-id="${num}"]`;
 
   const target = document.querySelector(targetClass);
@@ -161,6 +170,7 @@ function flipCard(num) {
 
           if (found.value == cards.length / 2) {
             winGame();
+            resetTimer();
           }
         } else {
           turnDownWrongCards(targets);
@@ -174,4 +184,33 @@ function flipCard(num) {
       }, oneSecInMls);
     }
   }
+}
+
+// Variáveis auxiliares para controle do timer.
+let minutes = 0;
+let seconds = 0;
+let interval = null;
+
+// Função responsável por iniciar o timer.
+function startTimer() {
+  interval = setInterval(() => {
+  seconds++;
+
+    if(seconds === 60) {
+      minutes++;
+      seconds = 0;
+
+    }  
+    secondsEl.textContent = seconds.toString().padStart(2, "0");
+    minutesEl.textContent = minutes.toString().padStart(2, "0");
+  }, 1000);
+}
+
+// Função responsável por reiniciar o timer.
+function resetTimer() {
+  clearInterval(interval);
+  minutes = 0;
+  seconds = 0;
+  minutesEl.textContent = "00";
+  secondsEl.textContent = "00";
 }
