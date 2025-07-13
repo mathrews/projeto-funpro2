@@ -77,7 +77,6 @@ function setupCards() {
 			<div class="flip-card" onClick="flipCard(${e.id})">
 						<div class="flip-card-inner" data-id="${e.id}" data-idequal="${e.idEqual}">
 							<div class="flip-card-front">
-								<h1>?</h1>
 							</div>
 							<div class="flip-card-back">
 								<img src="${e.img}"/>

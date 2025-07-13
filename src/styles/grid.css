@@ -143,8 +143,13 @@ body::before {
 }
 
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  background-color: #94241a;
+  background-image: url("../assets/cardFront.svg");
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border: 8px solid #94241a;
 }
 
 .flip-card-back {
@@ -243,12 +248,23 @@ body::before {
   flex: 1;
 }
 
+#description {
+  font-family: 'Alex Brush', cursive;
+  color: white;
+  letter-spacing: 0.06em;
+  font-weight: 100;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: -6rem; 
+}
+
 .header {
   position: relative;
   text-align: center;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
+  height: auto;
 }
 
 .btn-github {
@@ -261,6 +277,27 @@ body::before {
   text-decoration: none;
   font-size: 2.5rem;
   padding: 0;
-  color: #FFB01C;
+  color: #FFB01C; 
   margin: 20px 20px;   
+}
+
+.btn-github:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.start-button img {
+  width: 9rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.start-button img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.start-button {
+  text-align: center;
 }
