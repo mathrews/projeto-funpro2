@@ -301,3 +301,33 @@ body::before {
 .start-button {
   text-align: center;
 }
+
+.footer {
+  text-align: left;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  font-family: 'Play', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.footer li::before {
+  content: "-";
+  margin-right: 0.5rem;
+  color: white;
+  line-height: 0.5;
+}
+
+.footer p,
+.footer ul,
+.footer li {
+  margin: 0;
+  padding: 0;
+}
