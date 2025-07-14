@@ -163,7 +163,7 @@ body::before {
   background-color: #94241a;
   background-image: url("../assets/cardFront.svg");
   background-position: center;
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
   border: 8px solid #94241a;
@@ -205,7 +205,7 @@ body::before {
 
 #victory-content #button-win {
   margin: 1rem auto;
-  display: block; 
+  display: block;
 }
 
 .victory-modal-hidden {
@@ -231,7 +231,7 @@ body::before {
   background-color: #704113;
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.3);
   font-family: 'Play', sans-serif;
-  margin: 1rem; 
+  margin: 1rem;
 }
 
 #victory-content h2 {
@@ -244,8 +244,8 @@ body::before {
   font-size: 24px;
 }
 
-.victory-star { 
-  width: 50px; 
+.victory-star {
+  width: 50px;
   height: 50px;
   margin: 0 auto 1.5rem auto;
   background-image: url('../assets/2451996.svg');
@@ -272,7 +272,7 @@ body::before {
   font-weight: 100;
   font-size: 3rem;
   text-align: center;
-  margin-top: -6rem; 
+  margin-top: -6rem;
 }
 
 .header {
@@ -294,8 +294,8 @@ body::before {
   text-decoration: none;
   font-size: 2.5rem;
   padding: 0;
-  color: #FFB01C; 
-  margin: 20px 20px;   
+  color: #FFB01C;
+  margin: 20px 20px;
 }
 
 .btn-github:hover {
