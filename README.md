@@ -5,6 +5,10 @@ Fundamentos de Programação II no curso técnico integrado em Informática no
 IFCE, campus Fortaleza. O projeto consiste em construir um jogo escolhido pela
 equipe usando a trindade da web: HTML, CSS e Javascript. Escolhemos programar o Jogo da Memória.
 
+## URL do Projeto:
+
+- `memory-game-funpro2.up.railway.app`
+
 ## A Equipe
 
 - Gustavo Ruan (@gustavo1372);
@@ -17,10 +21,10 @@ equipe usando a trindade da web: HTML, CSS e Javascript. Escolhemos programar o 
 
 - Nicolly Bonifácio (@0Nicolly);
 
-## Para Executar:
+## Para Executar Localmente (Para Devs):
 
 ```bash
-npm i && nodemon ./src/server.js
+npm start
 ```
 
 ## Licença
